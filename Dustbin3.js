@@ -1,26 +1,25 @@
-class Dustbin3{
-  constructor(x,y,width,height){
-   
-    var options ={
-      isStatic:true
-     
-    }
-      this.body = Bodies.rectangle(x,y,width,height,options);
-        this.width = 90;
-        this.height = 90;
+class Dustbin3 {
+  constructor(y,x,width,height){
+       var options = {
+          isStatic:true
+      }
+    
   
+     this.body = Bodies.rectangle(y,x,width,height,options);
+     this.width = 90;
+        this.height = 90;
+
          World.add(world,this.body);
-  }
+        }
    
   display(){
       var pos =this.body.position;
-      push();
-      translate(pos.x,pos.y); 
-     // rotate(angle);
-   rectMode(CENTER);
-   rect(480, 135, 10, 90);
-            
+      rectMode(CENTER);
+      rect(-30, -2, 10, 110,{isStatic:true});
+      
+      translate(pos.x,pos.y);
+            fill("white");
       pop();
     }
   }
-
+  

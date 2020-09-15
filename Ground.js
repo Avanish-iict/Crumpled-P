@@ -5,8 +5,10 @@ class Ground{
             isStatic:true
         }
         this.body = Bodies.rectangle(x,y,width,height,options);
-          this.width = width;
-          this.height = height;
+          this.width = 10;
+          this.height = 110;
+
+       
     
            World.add(world,this.body);
     }
@@ -14,7 +16,7 @@ class Ground{
     display(){
         var pos =this.body.position;
         rectMode(CENTER);
-        rect(210,90, this.width, this.height);
+        rect(-223,289, this.width, this.height);
         translate(pos.x,pos.y);
         
               
